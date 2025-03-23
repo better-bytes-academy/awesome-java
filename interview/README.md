@@ -8,7 +8,7 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 ## Level beginner
 | Câu hỏi | Tag | Câu trả lời |
 |---------|-----|------------|
-| [Java là gì và tại sao nó được gọi là "platform-independent"](beginner/000-what-is-java.md) | java_basic | Java là ngôn ngữ lập trình hướng đối tượng, và nó "platform-independent" nhờ JVM - Java Virtual Machine, cho phép mã bytecode chạy trên bất kỳ hệ điều hành nào có JVM |
+| [Java là gì và tại sao nó được gọi là "platform-independent"](beginner/001-what-is-java.md) | java_basic | Java là ngôn ngữ lập trình hướng đối tượng, và nó "platform-independent" nhờ JVM - Java Virtual Machine, cho phép mã bytecode chạy trên bất kỳ hệ điều hành nào có JVM |
 | Sự khác biệt giữa JDK, JRE và JVM | java_basic | JDK là bộ công cụ phát triển, JRE là môi trường chạy Java, còn JVM là máy ảo thực thi bytecode |
 | Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
 
