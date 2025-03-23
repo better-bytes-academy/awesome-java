@@ -1,3 +1,6 @@
+# Câu hỏi
+Java là gì và tại sao nó được gọi là "platform-independent"
+
 # Trả lời ngắn gọn  
 Java là một ngôn ngữ lập trình hướng đối tượng, được gọi là "platform-independent" (độc lập nền tảng) vì mã Java sau khi biên dịch thành bytecode có thể chạy trên bất kỳ hệ điều hành nào có Java Virtual Machine (JVM).
 
