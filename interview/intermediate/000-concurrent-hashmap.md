@@ -180,9 +180,6 @@ Y -> 40
 - **Better performance** than `synchronized` blocks.  
 
 ---
-Here's an advanced example that demonstrates using `ConcurrentHashMap` with **parallel streams** and **custom concurrency scenarios**.  
-
----
 
 ### **Example: Using `ConcurrentHashMap` with Parallel Streams**
 ```java
