@@ -52,7 +52,7 @@ class MyClass inherits unrelated defaults for show() from types A and B
 *	Override phương thức trong MyClass để chọn cách thực hiện.
 *	Có thể gọi một phương thức cụ thể từ interface bằng InterfaceName.super.methodName().
 
-**Ví dụ hợp lê**:
+**Ví dụ hợp lệ**:
 ```java
 interface A {
     default void show() {
