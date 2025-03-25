@@ -79,6 +79,7 @@ Kết nối cơ sở dữ liệu được thiết lập
 ```
 
 **Giải thích**: Khối static chỉ chạy một lần duy nhất khi lớp được tải.
+
 **Kết luận:**
 *	Khối static chạy trước phương thức main() và chỉ thực thi một lần duy nhất.
 *	Được sử dụng để khởi tạo biến tĩnh, tải tài nguyên hoặc thực hiện các tác vụ khởi động quan trọng
