@@ -36,9 +36,9 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | Tính đa hình (Polymorphism) trong Java là gì? | java_basic | Tính đa hình (Polymorphism) là một trong bốn tính chất của lập trình hướng đối tượng (OOP), cho phép một phương thức có thể có nhiều cách thực hiện khác nhau, tùy thuộc vào ngữ cảnh. Trong Java, tính đa hình có hai dạng chính: đa hình tại thời điểm biên dịch (compile-time polymorphism) và đa hình tại thời điểm chạy (runtime polymorphism). |
 | Tính trừu tượng (Abstraction) trong Java là gì? | java_basic | Tính trừu tượng (Abstraction) là một trong bốn tính chất quan trọng của lập trình hướng đối tượng (OOP). Nó cho phép ẩn đi chi tiết triển khai và chỉ hiển thị những thông tin cần thiết cho người dùng. Trong Java, tính trừu tượng được thực hiện thông qua lớp trừu tượng (abstract class) và giao diện (interface). |
 | Từ khóa final trong Java là gì? | java_basic | final là một từ khóa trong Java được sử dụng để định nghĩa hằng số, ngăn chặn kế thừa hoặc ngăn chặn ghi đè phương thức. <br> - final với biến: Giá trị không thể thay đổi sau khi gán. <br> - final với phương thức: Không thể bị ghi đè (override) trong lớp con. <br> - final với lớp: Không thể bị kế thừa. |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Constructor là gì? Có bao nhiêu loại constructor trong Java? | java_basic | Constructor là một phương thức đặc biệt trong Java được gọi tự động khi tạo đối tượng, dùng để khởi tạo giá trị cho các biến của lớp. |
+| Từ khóa instanceof trong Java là gì? | java_basic | Từ khóa instanceof trong Java được dùng để kiểm tra xem một đối tượng có phải là thể hiện của một lớp hoặc một lớp con của nó hay không. |
+| Sự khác biệt giữa vòng lặp while và vòng lặp do-while trong Java là gì? | java_basic | Vòng lặp while và do-while đều dùng để thực thi một đoạn mã lặp đi lặp lại dựa trên điều kiện. <br>-	while kiểm tra điều kiện trước khi thực hiện vòng lặp → Nếu điều kiện sai ngay từ đầu, vòng lặp không chạy lần nào. <br>-	do-while thực thi ít nhất một lần rồi mới kiểm tra điều kiện → Đảm bảo vòng lặp luôn chạy ít nhất một lần. |
 
 ## Level intermediate
 | Câu hỏi | Tag | Câu trả lời |
