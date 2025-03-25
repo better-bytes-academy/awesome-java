@@ -45,6 +45,7 @@ public class Example {
 
 ## Triển khai ý 2: Tái sử dụng mã (Code Reusability) 
 Generic cho phép bạn tạo các lớp, giao diện, và phương thức có thể làm việc với nhiều kiểu dữ liệu khác nhau mà không cần viết nhiều phiên bản. 
+
 **Ví dụ thực tế:**  
 ```java
 class Box<T> { // Lớp Generic với kiểu dữ liệu T
