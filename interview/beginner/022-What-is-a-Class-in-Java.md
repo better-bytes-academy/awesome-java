@@ -8,7 +8,7 @@ Lớp (Class) trong Java là một khuôn mẫu (blueprint) để tạo ra các 
 Lớp giúp tổ chức mã nguồn theo cách có cấu trúc, trong đó:
 *	Thuộc tính (fields): Lưu trữ trạng thái của đối tượng.
 *	Phương thức (methods): Xác định hành vi của đối tượng.
-*	
+
  **Ví dụ**:
 ```java
 class Car {
