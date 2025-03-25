@@ -42,10 +42,10 @@ GC dọn dẹp: John
 
 ## Triển khai ý 2: Các cách để đối tượng trở thành garbage 
 1. Gán tham chiếu thành null
-   ```java
+```java
 String str = new String("Hello");
 str = null; // Đối tượng "Hello" không còn tham chiếu
-   ```
+```
 **Ví dụ thực tế:**  
 Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
 ```java
