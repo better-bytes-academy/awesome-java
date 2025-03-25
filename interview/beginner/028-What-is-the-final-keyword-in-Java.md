@@ -70,3 +70,40 @@ public class TestFinalMethod {
 ```java
 Phương thức final trong lớp cha
 ```
+**Lưu ý**:
+*	Giúp bảo vệ logic quan trọng không bị thay đổi trong lớp con.
+*	Hữu ích trong lập trình framework để ngăn chặn việc ghi đè ngoài ý muốn.
+
+2. final với lớp – Ngăn kế thừa
+*	Khi một lớp được khai báo với final, không lớp nào có thể kế thừa nó.
+
+**Ví dụ**:
+```java
+final class FinalClass {
+    void show() {
+        System.out.println("Lớp final không thể kế thừa");
+    }
+}
+
+// class SubClass extends FinalClass { ❌ Lỗi: Không thể kế thừa lớp final
+// }
+
+public class TestFinalClass {
+    public static void main(String[] args) {
+        FinalClass obj = new FinalClass();
+        obj.show();
+    }
+}
+```
+
+**Kết quả**
+```java
+Lớp final không thể kế thừa
+```
+
+**Lưu ý**:
+*	Thường dùng để bảo vệ các lớp quan trọng, như java.lang.String.
+*	Ví dụ: String là một lớp final để đảm bảo tính bất biến.
+
+
+
