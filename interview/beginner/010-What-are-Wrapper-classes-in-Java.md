@@ -9,6 +9,7 @@ Các lớp Wrapper trong Java là các lớp trong gói java.lang dùng để ba
 Mỗi kiểu dữ liệu nguyên thủy (primitive type) trong Java đều có một lớp Wrapper tương ứng:
 | Kiểu nguyên thủy | Lớp Wapper |
 |---------|-----|
+| byte | Byte |
 
 
 
