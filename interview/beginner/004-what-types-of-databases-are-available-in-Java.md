@@ -8,20 +8,24 @@ Java cung cấp 8 kiểu dữ liệu nguyên thủy (primitive data types), bao 
 Trong Java, kiểu dữ liệu nguyên thủy là những kiểu được tích hợp sẵn trong ngôn ngữ, giúp quản lý bộ nhớ và hiệu suất tốt hơn so với kiểu dữ liệu đối tượng..
 
 ## Triển khai ý 1: Nhóm kiểu số nguyên 
-Ví dụ mong ước đời dev
-1. Một vợ
-2. Hai con
-3. Ba Lầu
-4. Bốn bánh
+Các kiểu số nguyên trong Java bao gồm:
+1. byte (8-bit): Phạm vi từ -128 đến 127
+2. short (16-bit): Phạm vi từ -32,768 đến 32,767
+3. int (32-bit): Phạm vi từ -2^31 đến 2^31-1
+4. long (64-bit): Phạm vi từ -2^63 đến 2^63-1
  
 **Ví dụ thực tế:**  
 Bạn viết một chương trình Java đơn giản:  
 ```java
-public class HelloWorld {
+public class IntegerExample {
     public static void main(String[] args) {
-        System.out.println("Xin chào, Java!");
+        int age = 25;
+        long population = 7800000000L;
+        System.out.println("Tuổi: " + age);
+        System.out.println("Dân số thế giới: " + population);
     }
 }
+
 ```  
 Sau khi biên dịch bằng lệnh `javac HelloWorld.java`, bạn được file `HelloWorld.class` (bytecode). File này có thể chạy trên Windows, Linux hay macOS mà không cần chỉnh sửa, miễn là máy cài JVM.
 
