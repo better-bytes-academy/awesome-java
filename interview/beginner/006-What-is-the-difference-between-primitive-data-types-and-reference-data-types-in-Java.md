@@ -1,8 +1,9 @@
 # Câu hỏi
-Java là gì và tại sao nó được gọi là "platform-independent"
+Sự khác biệt giữa kiểu dữ liệu nguyên thủy (primitive type) và kiểu dữ liệu tham chiếu (reference type) trong Java là gì?
 
 # Trả lời ngắn gọn  
-Java là một ngôn ngữ lập trình hướng đối tượng, được gọi là "platform-independent" (độc lập nền tảng) vì mã Java sau khi biên dịch thành bytecode có thể chạy trên bất kỳ hệ điều hành nào có Java Virtual Machine (JVM).
+•	Kiểu dữ liệu nguyên thủy (primitive type): Lưu trữ giá trị trực tiếp trong bộ nhớ.
+•	Kiểu dữ liệu tham chiếu (reference type): Lưu trữ địa chỉ của đối tượng trong bộ nhớ Heap, không phải giá trị trực tiếp.
 
 # Chi tiết kèm ví dụ thực tế  
 Java được thiết kế để giảm sự phụ thuộc vào phần cứng hoặc hệ điều hành cụ thể, nhờ vào cơ chế biên dịch và thực thi đặc biệt của nó. Dưới đây là hai lý do chính giải thích tại sao Java là "platform-independent", kèm ví dụ minh họa.
