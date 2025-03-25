@@ -1,27 +1,51 @@
 # Câu hỏi
-Java là gì và tại sao nó được gọi là "platform-independent"
+Giải thích trình dọn rác (Garbage Collector) trong Java?
 
 # Trả lời ngắn gọn  
-Java là một ngôn ngữ lập trình hướng đối tượng, được gọi là "platform-independent" (độc lập nền tảng) vì mã Java sau khi biên dịch thành bytecode có thể chạy trên bất kỳ hệ điều hành nào có Java Virtual Machine (JVM).
+Garbage Collector (GC) trong Java là một cơ chế tự động quản lý bộ nhớ, giúp loại bỏ các đối tượng không còn được tham chiếu để giải phóng bộ nhớ Heap. Điều này giúp lập trình viên không cần xóa thủ công như trong C/C++.
 
-# Chi tiết kèm ví dụ thực tế  
-Java được thiết kế để giảm sự phụ thuộc vào phần cứng hoặc hệ điều hành cụ thể, nhờ vào cơ chế biên dịch và thực thi đặc biệt của nó. Dưới đây là hai lý do chính giải thích tại sao Java là "platform-independent", kèm ví dụ minh họa.
 
-## Triển khai ý 1: Biên dịch thành bytecode  
-Java không biên dịch trực tiếp thành mã máy (machine code) như C/C++, mà thành bytecode - một dạng mã trung gian. Bytecode này được JVM diễn giải và thực thi. Vì JVM có sẵn trên nhiều nền tảng (Windows, macOS, Linux…), mã Java chỉ cần viết một lần là có thể chạy khắp nơi.  
-**Ví dụ thực tế:**  
-Bạn viết một chương trình Java đơn giản:  
+## Triển khai ý 1: Cách hoạt động của Garbage Collector 
+GC xác định các đối tượng không còn tham chiếu bằng các thuật toán như:
+*	Mark and Sweep: Đánh dấu các đối tượng còn được sử dụng, sau đó xóa những đối tượng không còn tham chiếu.
+*	Generational Garbage Collection: Chia bộ nhớ Heap thành 3 vùng (Young Generation, Old Generation, Permanent Generation) để tối ưu hiệu suất.
+
+**Ví dụ về đối tượng không còn tham chiếu (eligible for GC)**  
+
 ```java
-public class HelloWorld {
+class GarbageExample {
     public static void main(String[] args) {
-        System.out.println("Xin chào, Java!");
+        Person p1 = new Person("John"); // Tạo đối tượng John trên Heap
+        p1 = new Person("Alice"); // Đối tượng John không còn tham chiếu và có thể bị GC dọn dẹp
+        System.gc(); // Yêu cầu GC chạy (không đảm bảo sẽ chạy ngay lập tức)
     }
 }
-```  
-Sau khi biên dịch bằng lệnh `javac HelloWorld.java`, bạn được file `HelloWorld.class` (bytecode). File này có thể chạy trên Windows, Linux hay macOS mà không cần chỉnh sửa, miễn là máy cài JVM.
 
-## Triển khai ý 2: JVM đóng vai trò trung gian  
-JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
+class Person {
+    String name;
+    Person(String name) {
+        this.name = name;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("GC dọn dẹp: " + this.name);
+    }
+}
+
+```  
+**Kết quả**
+```java
+GC dọn dẹp: John
+```
+(GC có thể không chạy ngay lập tức vì JVM quyết định).
+
+## Triển khai ý 2: Các cách để đối tượng trở thành garbage 
+1. Gán tham chiếu thành null
+   ```java
+String str = new String("Hello");
+str = null; // Đối tượng "Hello" không còn tham chiếu
+   ```
 **Ví dụ thực tế:**  
 Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
 ```java
