@@ -53,5 +53,5 @@ public class FloatCharExample {
 ```java
 Số pi: 3.14  
 Xếp loại: A  
-```java
+```
 
