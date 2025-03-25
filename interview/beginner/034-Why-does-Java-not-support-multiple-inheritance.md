@@ -33,7 +33,9 @@ int main() {
 ```
 
 **Kết quả**: Lỗi biên dịch vì D có hai bản sao của show() từ A.
+
 📌 Java giải quyết vấn đề này bằng cách cấm đa kế thừa giữa các lớp.
+
 ✅ Trong Java, chỉ có kế thừa đơn, mỗi lớp chỉ có một lớp cha duy nhất, giúp tránh Diamond Problem.
 
 ## Triển khai ý 2: Đơn giản hóa thiết kế và bảo trì mã nguồn
