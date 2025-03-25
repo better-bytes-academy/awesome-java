@@ -1,37 +1,61 @@
 # Câu hỏi
-Java là gì và tại sao nó được gọi là "platform-independent"
+Câu lệnh break và continue là gì?
 
 # Trả lời ngắn gọn  
-Java là một ngôn ngữ lập trình hướng đối tượng, được gọi là "platform-independent" (độc lập nền tảng) vì mã Java sau khi biên dịch thành bytecode có thể chạy trên bất kỳ hệ điều hành nào có Java Virtual Machine (JVM).
+*	break: Dùng để thoát hoàn toàn khỏi vòng lặp hoặc switch-case ngay khi điều kiện được thỏa mãn.
+*	continue: Dùng để bỏ qua lần lặp hiện tại và chuyển sang lần lặp tiếp theo mà không thực hiện các lệnh phía sau nó.
 
-# Chi tiết kèm ví dụ thực tế  
-Java được thiết kế để giảm sự phụ thuộc vào phần cứng hoặc hệ điều hành cụ thể, nhờ vào cơ chế biên dịch và thực thi đặc biệt của nó. Dưới đây là hai lý do chính giải thích tại sao Java là "platform-independent", kèm ví dụ minh họa.
 
-## Triển khai ý 1: Biên dịch thành bytecode  
-Java không biên dịch trực tiếp thành mã máy (machine code) như C/C++, mà thành bytecode - một dạng mã trung gian. Bytecode này được JVM diễn giải và thực thi. Vì JVM có sẵn trên nhiều nền tảng (Windows, macOS, Linux…), mã Java chỉ cần viết một lần là có thể chạy khắp nơi.  
+
+## Triển khai ý 1: break thoát khỏi vòng lặp 
+Khi gặp break, chương trình sẽ dừng vòng lặp ngay lập tức mà không kiểm tra hoặc thực thi tiếp các phần còn lại.  
+
 **Ví dụ thực tế:**  
-Bạn viết một chương trình Java đơn giản:  
+Tìm số đầu tiên chia hết cho 3 trong một danh sách số.
 ```java
-public class HelloWorld {
+public class BreakExample {
     public static void main(String[] args) {
-        System.out.println("Xin chào, Java!");
+        int[] numbers = {1, 5, 7, 9, 12, 15};
+
+        for (int num : numbers) {
+            if (num % 3 == 0) {
+                System.out.println("Số chia hết cho 3 đầu tiên: " + num);
+                break; // Thoát khỏi vòng lặp ngay khi tìm thấy số đầu tiên
+            }
+        }
     }
 }
-```  
-Sau khi biên dịch bằng lệnh `javac HelloWorld.java`, bạn được file `HelloWorld.class` (bytecode). File này có thể chạy trên Windows, Linux hay macOS mà không cần chỉnh sửa, miễn là máy cài JVM.
 
-## Triển khai ý 2: JVM đóng vai trò trung gian  
-JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
+```  
+✅ Khi tìm thấy số chia hết cho 3 đầu tiên (9), vòng lặp dừng ngay lập tức.
+📌 Ứng dụng thực tế của break: Dùng để dừng tìm kiếm khi đã đạt được điều kiện mong muốn, giúp tăng hiệu suất chương trình.
+
+## Triển khai ý 2: continue bỏ qua lần lặp hiện tại
+Khi gặp continue, chương trình sẽ bỏ qua phần còn lại của lần lặp hiện tại và tiếp tục vòng lặp với giá trị tiếp theo. 
+
 **Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
+In các số từ 1 đến 10, nhưng bỏ qua số chia hết cho 3.
 ```java
-public class Calculator {
+public class ContinueExample {
     public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
+        for (int i = 1; i <= 10; i++) {
+            if (i % 3 == 0) {
+                continue; // Bỏ qua số chia hết cho 3
+            }
+            System.out.print(i + " ");
+        }
     }
 }
-```  
-Bạn biên dịch trên macOS, sau đó copy file `.class` sang một máy Windows và chạy bằng lệnh `java Calculator`. Kết quả "Tổng: 15" sẽ hiển thị giống nhau, vì JVM trên Windows xử lý bytecode tương tự như JVM trên macOS.
 
-Nhờ bytecode và JVM, Java đạt được tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
+```  
+✅ Chương trình sẽ in: 1 2 4 5 7 8 10 (bỏ qua 3, 6, 9).
+📌 Ứng dụng thực tế của continue: Dùng khi muốn bỏ qua một số giá trị nhất định mà không làm gián đoạn toàn bộ vòng lặp.
+
+
+
+
+**Kết luận**
+*	break: Dùng để thoát khỏi vòng lặp hoặc switch-case ngay lập tức.
+*	continue: Dùng để bỏ qua lần lặp hiện tại và tiếp tục vòng lặp.
+*	Cả hai lệnh này giúp tối ưu hóa luồng điều khiển trong chương trình, giúp mã nguồn dễ hiểu và hiệu suất tốt hơn. 
+
