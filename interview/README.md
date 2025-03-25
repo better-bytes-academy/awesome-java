@@ -39,7 +39,16 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | Constructor là gì? Có bao nhiêu loại constructor trong Java? | java_basic | Constructor là một phương thức đặc biệt trong Java được gọi tự động khi tạo đối tượng, dùng để khởi tạo giá trị cho các biến của lớp. |
 | Từ khóa instanceof trong Java là gì? | java_basic | Từ khóa instanceof trong Java được dùng để kiểm tra xem một đối tượng có phải là thể hiện của một lớp hoặc một lớp con của nó hay không. |
 | Sự khác biệt giữa vòng lặp while và vòng lặp do-while trong Java là gì? | java_basic | Vòng lặp while và do-while đều dùng để thực thi một đoạn mã lặp đi lặp lại dựa trên điều kiện. <br>-	while kiểm tra điều kiện trước khi thực hiện vòng lặp → Nếu điều kiện sai ngay từ đầu, vòng lặp không chạy lần nào. <br>-	do-while thực thi ít nhất một lần rồi mới kiểm tra điều kiện → Đảm bảo vòng lặp luôn chạy ít nhất một lần. |
-
+| Từ khóa super và this trong Java là gì? | java_basic | super và this là hai từ khóa quan trọng trong Java, dùng để tham chiếu đến các thành phần khác nhau của lớp.<br>-	super: Dùng để gọi constructor hoặc phương thức của lớp cha (superclass).<br>-	this: Dùng để tham chiếu đến biến, phương thức hoặc constructor của chính lớp hiện tại. |
+| Upcasting và Downcasting trong Java là gì? | java_basic | Upcasting và Downcasting là hai loại ép kiểu trong Java khi làm việc với kế thừa.<br>-	Upcasting: Ép kiểu từ lớp con lên lớp cha (an toàn, tự động hoặc tường minh).<br>-	Downcasting: Ép kiểu từ lớp cha xuống lớp con (cần tường minh, có thể gây lỗi ClassCastException). |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
 ## Level intermediate
 | Câu hỏi | Tag | Câu trả lời |
 |---------|-----|------------|
