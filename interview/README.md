@@ -48,6 +48,9 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | Sự khác nhau giữa String Pool và Heap Memory khi lưu trữ chuỗi trong Java?| java_basic | Trong Java, chuỗi (String) có thể được lưu trữ ở hai vùng nhớ khác nhau:<br>- **String Pool**: Lưu trữ chuỗi trong một bộ nhớ đặc biệt bên trong Heap Memory. Nếu một chuỗi đã tồn tại, Java sẽ tái sử dụng thay vì tạo mới.<br>-	**Heap Memory**: Tạo một đối tượng String mới hoàn toàn, ngay cả khi nội dung giống nhau. |
 | Sự khác nhau giữa switch và if-else trong Java? | java_basic | Cả switch và if-else đều được dùng để kiểm tra điều kiện trong Java, nhưng có sự khác biệt:<br>-	if-else: Dùng khi có nhiều điều kiện phức tạp, hỗ trợ mọi kiểu dữ liệu boolean.<br>-	switch: Dùng khi có nhiều trường hợp so sánh với một giá trị cố định, giúp code ngắn gọn hơn khi có nhiều điều kiện. |
 | Tệp .java và .class trong Java có gì khác nhau? | java_basic | <br>-	Tệp .java: Chứa mã nguồn Java do lập trình viên viết.<br>-	Tệp .class: Chứa mã bytecode sau khi biên dịch từ .java, có thể chạy trên JVM.<br> Quá trình chuyển đổi: Tệp .java được biên dịch bằng javac để tạo ra tệp .class, sau đó JVM đọc và thực thi mã bytecode trong .class.|
+| ++i và i++ khác nhau như thế nào? | java_basic | -	++i (tiền tố): Tăng giá trị của i trước khi sử dụng.<br>-	i++ (hậu tố): Sử dụng giá trị hiện tại của i, sau đó mới tăng. |
+| Tại sao HashSet không cho phép phần tử trùng lặp? | java_basic | HashSet không cho phép phần tử trùng lặp vì nó sử dụng cơ chế băm (hashing) và so sánh bằng phương thức equals() để kiểm tra xem một phần tử đã tồn tại hay chưa. Khi thêm một phần tử mới, HashSet kiểm tra xem phần tử đó có cùng hash code với phần tử khác trong tập hợp hay không. Nếu có, nó tiếp tục kiểm tra bằng equals(). Nếu equals() trả về true, phần tử mới sẽ không được thêm vào. |
+
 ## Level intermediate
 | Câu hỏi | Tag | Câu trả lời |
 |---------|-----|------------|
