@@ -25,9 +25,13 @@ public class IntegerExample {
         System.out.println("Dân số thế giới: " + population);
     }
 }
-
 ```  
-Sau khi biên dịch bằng lệnh `javac HelloWorld.java`, bạn được file `HelloWorld.class` (bytecode). File này có thể chạy trên Windows, Linux hay macOS mà không cần chỉnh sửa, miễn là máy cài JVM.
+**Kết quả**
+```java
+Tuổi: 25  
+Dân số thế giới: 7800000000  
+
+```
 
 ## Triển khai ý 2: JVM đóng vai trò trung gian  
 JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
