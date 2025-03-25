@@ -33,18 +33,25 @@ Dân số thế giới: 7800000000
 
 ```
 
-## Triển khai ý 2: JVM đóng vai trò trung gian  
-JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
+## Triển khai ý 2: Nhóm kiểu số thực và kiểu ký tự 
+1.	float (32-bit): Dùng cho số thực có độ chính xác đơn.
+2.	double (64-bit): Dùng cho số thực có độ chính xác kép (mặc định cho số thực).
+3.	char (16-bit): Đại diện cho một ký tự Unicode (chữ cái, số, ký tự đặc biệt).
+ 
 **Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
 ```java
-public class Calculator {
+public class FloatCharExample {
     public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
+        float pi = 3.14f;
+        char grade = 'A';
+        System.out.println("Số pi: " + pi);
+        System.out.println("Xếp loại: " + grade);
     }
 }
-```  
-Bạn biên dịch trên macOS, sau đó copy file `.class` sang một máy Windows và chạy bằng lệnh `java Calculator`. Kết quả "Tổng: 15" sẽ hiển thị giống nhau, vì JVM trên Windows xử lý bytecode tương tự như JVM trên macOS.
+```
+**Kết quả**
+```java
+Số pi: 3.14  
+Xếp loại: A  
+```java
 
-Nhờ bytecode và JVM, Java đạt được tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
