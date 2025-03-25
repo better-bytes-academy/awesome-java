@@ -28,6 +28,7 @@ public class BreakExample {
 
 ```  
 ✅ Khi tìm thấy số chia hết cho 3 đầu tiên (9), vòng lặp dừng ngay lập tức.
+
 📌 Ứng dụng thực tế của break: Dùng để dừng tìm kiếm khi đã đạt được điều kiện mong muốn, giúp tăng hiệu suất chương trình.
 
 ## Triển khai ý 2: continue bỏ qua lần lặp hiện tại
@@ -49,6 +50,7 @@ public class ContinueExample {
 
 ```  
 ✅ Chương trình sẽ in: 1 2 4 5 7 8 10 (bỏ qua 3, 6, 9).
+
 📌 Ứng dụng thực tế của continue: Dùng khi muốn bỏ qua một số giá trị nhất định mà không làm gián đoạn toàn bộ vòng lặp.
 
 
