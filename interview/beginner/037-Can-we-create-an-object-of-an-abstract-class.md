@@ -3,6 +3,7 @@ Có thể tạo một đối tượng từ một abstract class không?
 
 # Trả lời ngắn gọn  
 ❌ Không thể tạo trực tiếp một đối tượng từ abstract class.
+
 ✅ Nhưng có thể tạo đối tượng gián tiếp bằng cách: Kế thừa abstract class và tạo đối tượng từ subclass.
 
 
