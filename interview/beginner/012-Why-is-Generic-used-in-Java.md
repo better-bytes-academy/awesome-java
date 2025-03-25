@@ -71,4 +71,4 @@ public class Example {
 }
 
 ```  
-✅ Tạo một lớp Box dùng được cho cả String và Integer mà không cần viết nhiều lần.ược tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
+✅ Tạo một lớp Box dùng được cho cả String và Integer mà không cần viết nhiều lần.
