@@ -39,18 +39,39 @@ Bob
 Charlie  
 ```
 ✅Lợi ích: Duyệt danh sách mà không cần dùng vòng lặp for hoặc truy cập trực tiếp chỉ mục (index).
-## Triển khai ý 2: JVM đóng vai trò trung gian  
-JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
+
+## Triển khai ý 2: Iterator hỗ trợ xóa phần tử an toàn trong khi duyệt
+
 **Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
+Xóa tất cả sinh viên có tên bắt đầu bằng chữ B.
 ```java
-public class Calculator {
+import java.util.*;
+
+public class RemoveUsingIterator {
     public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
+        List<String> students = new ArrayList<>();
+        students.add("Alice");
+        students.add("Bob");
+        students.add("Charlie");
+        
+        Iterator<String> iterator = students.iterator();
+        
+        while (iterator.hasNext()) {
+            String name = iterator.next();
+            if (name.startsWith("B")) {
+                iterator.remove(); // Xóa phần tử an toàn
+            }
+        }
+
+        System.out.println(students); // Output: [Alice, Charlie]
     }
 }
-```  
-Bạn biên dịch trên macOS, sau đó copy file `.class` sang một máy Windows và chạy bằng lệnh `java Calculator`. Kết quả "Tổng: 15" sẽ hiển thị giống nhau, vì JVM trên Windows xử lý bytecode tương tự như JVM trên macOS.
 
-Nhờ bytecode và JVM, Java đạt được tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
+```  
+✅ Lớp Iterator giúp xóa phần tử mà không gây lỗi ConcurrentModificationException.
+
+**Kết luận**
+*	Iterator giúp duyệt qua Collection một cách tuần tự.
+*	Có thể xóa phần tử an toàn trong khi duyệt mà không gây lỗi.
+*	Thay thế vòng lặp for khi không cần truy cập trực tiếp chỉ mục.
+
