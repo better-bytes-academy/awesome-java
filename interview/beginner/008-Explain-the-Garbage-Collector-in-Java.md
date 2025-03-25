@@ -46,16 +46,20 @@ GC dọn dẹp: John
 String str = new String("Hello");
 str = null; // Đối tượng "Hello" không còn tham chiếu
 ```
-**Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
-```java
-public class Calculator {
-    public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
-    }
-}
-```  
-Bạn biên dịch trên macOS, sau đó copy file `.class` sang một máy Windows và chạy bằng lệnh `java Calculator`. Kết quả "Tổng: 15" sẽ hiển thị giống nhau, vì JVM trên Windows xử lý bytecode tương tự như JVM trên macOS.
 
-Nhờ bytecode và JVM, Java đạt được tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
+2.	Gán tham chiếu cho đối tượng khác
+```java
+Person p = new Person("A");
+p = new Person("B"); // "A" không còn tham chiếu
+```
+3.	Đối tượng trong phạm vi cục bộ bị mất sau khi phương thức kết thúc
+```java
+void someMethod() {
+    Person p = new Person("C"); // Sau khi phương thức kết thúc, p sẽ không còn tồn tại
+}
+```
+
+**Kết luận**
+*	Garbage Collector giúp Java quản lý bộ nhớ tự động, tránh lỗi tràn bộ nhớ (Memory Leak).
+*	Lập trình viên không thể điều khiển trực tiếp GC, nhưng có thể tối ưu mã nguồn để giảm số lượng đối tượng rác. 
+
