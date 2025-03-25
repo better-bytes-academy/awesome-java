@@ -20,6 +20,14 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | Các lớp Wrapper trong Java là gì? | java_basic | Các lớp Wrapper trong Java là các lớp trong gói java.lang dùng để bao bọc (wrap) kiểu dữ liệu nguyên thủy thành đối tượng. Điều này giúp làm việc với kiểu dữ liệu nguyên thủy dễ dàng hơn trong các cấu trúc yêu cầu đối tượng, như Collection (List, Set, Map). |
 | Lệnh import được sử dụng ở đâu trong một chương trình Java? | java_basic | Lệnh import trong Java được sử dụng ở đầu tệp mã nguồn (trước khi khai báo lớp) để nhập các lớp hoặc gói cần thiết từ thư viện Java hoặc từ mã nguồn khác. Điều này giúp lập trình viên sử dụng các lớp mà không cần viết đầy đủ đường dẫn gói của chúng. |
 | Tại sao Generic được sử dụng trong Java? | java_basic | Generic trong Java giúp tăng tính an toàn kiểu dữ liệu và tái sử dụng mã bằng cách cho phép xác định kiểu dữ liệu tại thời điểm biên dịch thay vì sử dụng kiểu Object. Điều này giúp tránh lỗi ép kiểu và làm cho mã nguồn dễ đọc hơn. |
+| Tại sao Java không hỗ trợ con trỏ? | java_basic | Java không hỗ trợ con trỏ để đảm bảo an toàn bộ nhớ và giảm độ phức tạp lập trình. Việc sử dụng con trỏ có thể gây lỗi truy cập bộ nhớ hoặc rò rỉ bộ nhớ, nên Java thay thế bằng tham chiếu và Garbage Collector để quản lý bộ nhớ tự động.; |
+| Câu lệnh break và continue là gì? | java_basic | - **break**: Dùng để thoát hoàn toàn khỏi vòng lặp hoặc switch-case ngay khi điều kiện được thỏa mãn. <br> - **continue**: Dùng để bỏ qua lần lặp hiện tại và chuyển sang lần lặp tiếp theo mà không thực hiện các lệnh phía sau nó. |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
 
 ## Level intermediate
 | Câu hỏi | Tag | Câu trả lời |
