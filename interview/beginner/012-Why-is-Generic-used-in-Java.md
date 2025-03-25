@@ -7,6 +7,7 @@ Generic trong Java giúp tăng tính an toàn kiểu dữ liệu và tái sử d
 
 ## Triển khai ý 1: Tăng tính an toàn kiểu dữ liệu (Type Safety)
 Khi sử dụng Generic, bạn không cần ép kiểu thủ công, giúp tránh lỗi khi biên dịch. 
+
 **Ví dụ thực tế (Không dùng Generic - dễ lỗi ép kiểu):**  
 ```java
 import java.util.ArrayList;
