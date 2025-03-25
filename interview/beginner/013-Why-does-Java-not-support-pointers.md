@@ -7,6 +7,7 @@ Java không hỗ trợ con trỏ để đảm bảo an toàn bộ nhớ và gi�
 
 ## Triển khai ý 1: Đảm bảo an toàn bộ nhớ  
 Trong C/C++, con trỏ có thể trỏ đến vùng nhớ không hợp lệ, dễ gây lỗi truy cập bộ nhớ ngoài phạm vi (Segmentation Fault).  
+
 **Ví dụ thực tế (C++ - lỗi con trỏ):**  
 
 ```java
@@ -20,6 +21,7 @@ Trong Java, mọi đối tượng được truy cập thông qua tham chiếu, k
 
 ## Triển khai ý 2: Giảm độ phức tạp lập trình
 Trong C++, lập trình viên phải tự giải phóng bộ nhớ, dễ dẫn đến rò rỉ bộ nhớ (Memory Leak) nếu quên giải phóng thủ công.
+
 **Ví dụ thực tế (C++ - có nguy cơ rò rỉ bộ nhớ):**  
 Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
 ```java
