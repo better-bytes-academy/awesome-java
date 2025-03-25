@@ -2,37 +2,65 @@
 Sự khác biệt giữa kiểu dữ liệu nguyên thủy (primitive type) và kiểu dữ liệu tham chiếu (reference type) trong Java là gì?
 
 # Trả lời ngắn gọn  
-•	Kiểu dữ liệu nguyên thủy (primitive type): Lưu trữ giá trị trực tiếp trong bộ nhớ.
-•	Kiểu dữ liệu tham chiếu (reference type): Lưu trữ địa chỉ của đối tượng trong bộ nhớ Heap, không phải giá trị trực tiếp.
+*	Kiểu dữ liệu nguyên thủy (primitive type): Lưu trữ giá trị trực tiếp trong bộ nhớ.
+*	Kiểu dữ liệu tham chiếu (reference type): Lưu trữ địa chỉ của đối tượng trong bộ nhớ Heap, không phải giá trị trực tiếp.
 
 # Chi tiết kèm ví dụ thực tế  
-Java được thiết kế để giảm sự phụ thuộc vào phần cứng hoặc hệ điều hành cụ thể, nhờ vào cơ chế biên dịch và thực thi đặc biệt của nó. Dưới đây là hai lý do chính giải thích tại sao Java là "platform-independent", kèm ví dụ minh họa.
+Trong Java, có hai loại kiểu dữ liệu chính: nguyên thủy (primitive) và tham chiếu (reference).
 
-## Triển khai ý 1: Biên dịch thành bytecode  
-Java không biên dịch trực tiếp thành mã máy (machine code) như C/C++, mà thành bytecode - một dạng mã trung gian. Bytecode này được JVM diễn giải và thực thi. Vì JVM có sẵn trên nhiều nền tảng (Windows, macOS, Linux…), mã Java chỉ cần viết một lần là có thể chạy khắp nơi.  
+## Triển khai ý 1: Kiểu dữ liệu nguyên thủy (primitive type)
+*	Có 8 loại: byte, short, int, long, float, double, char, boolean.
+*	Lưu trữ giá trị thực trong bộ nhớ Stack.
+*	Không phải là đối tượng, hoạt động nhanh hơn
+  
 **Ví dụ thực tế:**  
-Bạn viết một chương trình Java đơn giản:  
 ```java
-public class HelloWorld {
+public class PrimitiveExample {
     public static void main(String[] args) {
-        System.out.println("Xin chào, Java!");
+        int a = 10;
+        int b = a; // Sao chép giá trị a vào b
+        
+        b = 20; // Chỉ thay đổi b, a vẫn giữ nguyên giá trị 10
+
+        System.out.println("a: " + a); // Output: a: 10
+        System.out.println("b: " + b); // Output: b: 20
     }
 }
 ```  
-Sau khi biên dịch bằng lệnh `javac HelloWorld.java`, bạn được file `HelloWorld.class` (bytecode). File này có thể chạy trên Windows, Linux hay macOS mà không cần chỉnh sửa, miễn là máy cài JVM.
+👉 Giá trị của a không bị thay đổi, vì b chỉ là một bản sao độc lập.
 
-## Triển khai ý 2: JVM đóng vai trò trung gian  
-JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
+## Triển khai ý 2: Kiểu dữ liệu tham chiếu (reference type) 
+*	Bao gồm các đối tượng, mảng, chuỗi (String), và lớp tự định nghĩa.
+*	Lưu trữ địa chỉ (reference) của đối tượng trong bộ nhớ Heap, còn biến tham chiếu nằm trong Stack.
+*	Khi gán một biến tham chiếu cho biến khác, cả hai đều trỏ đến cùng một đối tượng.
+ 
 **Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
 ```java
-public class Calculator {
-    public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
+class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
     }
 }
-```  
-Bạn biên dịch trên macOS, sau đó copy file `.class` sang một máy Windows và chạy bằng lệnh `java Calculator`. Kết quả "Tổng: 15" sẽ hiển thị giống nhau, vì JVM trên Windows xử lý bytecode tương tự như JVM trên macOS.
 
-Nhờ bytecode và JVM, Java đạt được tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
+public class ReferenceExample {
+    public static void main(String[] args) {
+        Person p1 = new Person("John");
+        Person p2 = p1; // p2 trỏ đến cùng đối tượng với p1
+
+        p2.name = "David"; // Thay đổi giá trị của p2 cũng làm thay đổi p1
+
+        System.out.println("p1.name: " + p1.name); // Output: p1.name: David
+        System.out.println("p2.name: " + p2.name); // Output: p2.name: David
+    }
+}
+
+```  
+👉 Cả p1 và p2 đều trỏ đến cùng một đối tượng, nên thay đổi p2 cũng ảnh hưởng đến p1.
+
+**Kết luận**
+*	Kiểu nguyên thủy lưu trữ giá trị trực tiếp, hoạt động nhanh hơn và độc lập.
+*	Kiểu tham chiếu lưu địa chỉ của đối tượng, khi thay đổi dữ liệu thì tất cả biến trỏ đến đối tượng đó đều bị ảnh hưởng.
+*	Hiểu rõ sự khác biệt này giúp tránh lỗi khi thao tác với đối tượng và biến trong Java.
+
