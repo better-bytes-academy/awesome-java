@@ -49,5 +49,46 @@ Tên: Không xác định, Tuổi: 18
 *	Nếu có constructor khác, Java sẽ không tự động tạo constructor mặc định.
 
 
-## Triển khai ý 2:
+## Triển khai ý 2: Constructor có tham số (Parameterized Constructor)
+*	Là constructor có tham số để gán giá trị cho các thuộc tính ngay khi tạo đối tượng.
+*	Giúp tăng tính linh hoạt khi khởi tạo đối tượng với giá trị khác nhau.
+
+**Ví dụ**
+```java
+class Student {
+    String name;
+    int age;
+
+    // Constructor có tham số
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Tên: " + name + ", Tuổi: " + age);
+    }
+}
+
+public class TestParameterizedConstructor {
+    public static void main(String[] args) {
+        Student s1 = new Student("An", 20);
+        Student s2 = new Student("Bình", 22);
+
+        s1.display();
+        s2.display();
+    }
+}
+```
+
+**Kết quả**
+```java
+Tên: An, Tuổi: 20  
+Tên: Bình, Tuổi: 22
+
+```
+
+**Lưu ý**:
+*	Nếu bạn khai báo constructor có tham số, Java sẽ không tự động tạo constructor mặc định.
+*	Có thể tạo nhiều constructor với số lượng tham số khác nhau (Constructor Overloading).
 
