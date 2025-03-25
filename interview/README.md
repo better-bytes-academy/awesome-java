@@ -14,12 +14,12 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | Các kiểu dữ liệu cơ bản có sẵn trong Java? | java_basic | Java cung cấp 8 kiểu dữ liệu nguyên thủy (primitive data types), bao gồm: byte, short, int, long, float, double, char, và boolean. Những kiểu này giúp Java xử lý dữ liệu hiệu quả và tối ưu bộ nhớ. |
 | Phương thức main trong Java là gì?  | java_basic | Phương thức main là điểm bắt đầu của mọi chương trình Java. Khi chạy chương trình, JVM sẽ tìm và thực thi phương thức main(). |
 | Sự khác biệt giữa kiểu dữ liệu nguyên thủy và kiểu dữ liệu tham chiếu trong Java là gì? | java_basic | - **Kiểu dữ liệu nguyên thủy**: Lưu trữ giá trị trực tiếp trong bộ nhớ.  -**Kiểu dữ liệu tham chiếu**: Lưu trữ địa chỉ của đối tượng trong bộ nhớ Heap, không phải giá trị trực tiếp. |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Sự khác biệt giữa Stack và Heap trong Java là gì? | java_basic | -	**Stack**: Bộ nhớ dành cho các biến cục bộ và lời gọi hàm, có tốc độ truy cập nhanh, quản lý theo cơ chế LIFO.-	**Heap**: Bộ nhớ dành cho đối tượng và dữ liệu động, có thể truy cập toàn cục nhưng chậm hơn do cần quản lý bộ nhớ tự động (Garbage Collection). |
+| Giải thích trình dọn rác (Garbage Collector) trong Java? | java_basic | Garbage Collector (GC) trong Java là một cơ chế tự động quản lý bộ nhớ, giúp loại bỏ các đối tượng không còn được tham chiếu để giải phóng bộ nhớ Heap. Điều này giúp lập trình viên không cần xóa thủ công như trong C/C++. |
+| Khối static là gì? | java_basic | Khối static trong Java là một khối mã được thực thi chỉ một lần khi lớp được tải vào bộ nhớ, trước cả khi đối tượng của lớp được tạo ra hoặc phương thức main() chạy. |
+| Các lớp Wrapper trong Java là gì? | java_basic | Các lớp Wrapper trong Java là các lớp trong gói java.lang dùng để bao bọc (wrap) kiểu dữ liệu nguyên thủy thành đối tượng. Điều này giúp làm việc với kiểu dữ liệu nguyên thủy dễ dàng hơn trong các cấu trúc yêu cầu đối tượng, như Collection (List, Set, Map). |
+| Lệnh import được sử dụng ở đâu trong một chương trình Java? | java_basic | Lệnh import trong Java được sử dụng ở đầu tệp mã nguồn (trước khi khai báo lớp) để nhập các lớp hoặc gói cần thiết từ thư viện Java hoặc từ mã nguồn khác. Điều này giúp lập trình viên sử dụng các lớp mà không cần viết đầy đủ đường dẫn gói của chúng. |
+| Tại sao Generic được sử dụng trong Java? | java_basic | Generic trong Java giúp tăng tính an toàn kiểu dữ liệu và tái sử dụng mã bằng cách cho phép xác định kiểu dữ liệu tại thời điểm biên dịch thay vì sử dụng kiểu Object. Điều này giúp tránh lỗi ép kiểu và làm cho mã nguồn dễ đọc hơn. |
 
 ## Level intermediate
 | Câu hỏi | Tag | Câu trả lời |
