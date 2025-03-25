@@ -28,15 +28,32 @@ Khi chạy chương trình, JVM sẽ tìm main() và bắt đầu thực thi mã
  1. `public` (Phạm vi truy cập công khai)
 * Giúp JVM có thể gọi `main()` từ bên ngoài lớp.
 * Nếu bỏ `public`, JVM không thể truy cập `main()`, gây lỗi khi chạy chương trình.
- 
-**Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
+ 2. static (Phương thức tĩnh)
+•	Cho phép JVM gọi main() mà không cần tạo đối tượng của lớp.
+•	Nếu bỏ static, chương trình sẽ yêu cầu tạo đối tượng trước khi gọi main(), không phù hợp với Java.
+3. void (Không có giá trị trả về)
+•	main() không cần trả về kết quả cho JVM, nên khai báo void.
+•	Nếu đổi thành kiểu khác (ví dụ: int), chương trình sẽ báo lỗi.
+Ví dụ về lỗi khi bỏ static hoặc public:
+**Ví dụ thực tế:**    
 ```java
-public class Calculator {
-    public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
+public class Test {
+    void main(String[] args) { // Thiếu static và public
+        System.out.println("Lỗi sẽ xảy ra!");
     }
 }
-```  
+```
+**Kết quả**
+```java
+Error: Main method not found in class Test
+```
+JVM không thể tìm thấy main() đúng chuẩn nên chương trình không thể chạy.
+
+**Kết luận**
+•	Phương thức main() là điểm bắt đầu của chương trình Java.
+•	public cho phép JVM truy cập từ bên ngoài.
+•	static giúp gọi main() mà không cần tạo đối tượng.
+•	void đảm bảo main() không cần trả về giá trị.
+•	Nếu không có main(), chương trình Java không thể chạy.
+
 
