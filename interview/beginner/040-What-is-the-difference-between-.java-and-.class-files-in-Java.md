@@ -35,13 +35,13 @@ public class HelloWorld {
 
 **Ví dụ**
 
-**Bước 1:**Biên dịch tệp .java
+**Bước 1:** Biên dịch tệp .java
 ```java
 javac HelloWorld.java
 ```
 Lệnh này tạo ra HelloWorld.class.
 
-**Bước 2:**Chạy chương trình bằng JVM
+**Bước 2:** Chạy chương trình bằng JVM
 ```java
 java HelloWorld
 ```
