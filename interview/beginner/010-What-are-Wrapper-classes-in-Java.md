@@ -10,8 +10,13 @@ Mỗi kiểu dữ liệu nguyên thủy (primitive type) trong Java đều có m
 | Kiểu nguyên thủy | Lớp Wapper |
 |---------|-----|
 | byte | Byte |
-
-
+| short | Short |
+| int | Integer |
+| long | Long |
+| float | Float |
+| double | Double |
+| char | Character |
+| boolean | Boolean |
 
 ## Triển khai ý 2: JVM đóng vai trò trung gian  
 
