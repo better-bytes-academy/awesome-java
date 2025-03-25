@@ -50,10 +50,8 @@ Error: Main method not found in class Test
 JVM không thể tìm thấy main() đúng chuẩn nên chương trình không thể chạy.
 
 **Kết luận**
-•	Phương thức main() là điểm bắt đầu của chương trình Java.
-•	public cho phép JVM truy cập từ bên ngoài.
-•	static giúp gọi main() mà không cần tạo đối tượng.
-•	void đảm bảo main() không cần trả về giá trị.
-•	Nếu không có main(), chương trình Java không thể chạy.
-
-
+*	Phương thức main() là điểm bắt đầu của chương trình Java.
+*	public cho phép JVM truy cập từ bên ngoài.
+*	static giúp gọi main() mà không cần tạo đối tượng.
+*	void đảm bảo main() không cần trả về giá trị.
+*	Nếu không có main(), chương trình Java không thể chạy.
