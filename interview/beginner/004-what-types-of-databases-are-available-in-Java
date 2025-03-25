@@ -1,11 +1,12 @@
 # Câu hỏi
-Các kiểu dữ liệu cơ bản có sẵn trong Java
+Java là gì và tại sao nó được gọi là "platform-independent"
 
 # Trả lời ngắn gọn  
-Java cung cấp 8 kiểu dữ liệu nguyên thủy (primitive data types), bao gồm: byte, short, int, long, float, double, char, và boolean. Những kiểu này giúp Java xử lý dữ liệu hiệu quả và tối ưu bộ nhớ.
+Java là một ngôn ngữ lập trình hướng đối tượng, được gọi là "platform-independent" (độc lập nền tảng) vì mã Java sau khi biên dịch thành bytecode có thể chạy trên bất kỳ hệ điều hành nào có Java Virtual Machine (JVM).
 
 # Chi tiết kèm ví dụ thực tế  
-Trong Java, kiểu dữ liệu nguyên thủy là những kiểu được tích hợp sẵn trong ngôn ngữ, giúp quản lý bộ nhớ và hiệu suất tốt hơn so với kiểu dữ liệu đối tượng.
+Java được thiết kế để giảm sự phụ thuộc vào phần cứng hoặc hệ điều hành cụ thể, nhờ vào cơ chế biên dịch và thực thi đặc biệt của nó. Dưới đây là hai lý do chính giải thích tại sao Java là "platform-independent", kèm ví dụ minh họa.
+
 ## Triển khai ý 1: Biên dịch thành bytecode  
 Java không biên dịch trực tiếp thành mã máy (machine code) như C/C++, mà thành bytecode - một dạng mã trung gian. Bytecode này được JVM diễn giải và thực thi. Vì JVM có sẵn trên nhiều nền tảng (Windows, macOS, Linux…), mã Java chỉ cần viết một lần là có thể chạy khắp nơi.  
 **Ví dụ thực tế:**  
