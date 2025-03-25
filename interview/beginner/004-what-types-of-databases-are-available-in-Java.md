@@ -9,10 +9,10 @@ Trong Java, kiểu dữ liệu nguyên thủy là những kiểu được tích 
 
 ## Triển khai ý 1: Nhóm kiểu số nguyên 
 Các kiểu số nguyên trong Java bao gồm:
-•	byte (8-bit): Phạm vi từ -128 đến 127
-•	short (16-bit): Phạm vi từ -32,768 đến 32,767
-•	int (32-bit): Phạm vi từ -2^31 đến 2^31-1
-•	long (64-bit): Phạm vi từ -2^63 đến 2^63-1
+1	byte (8-bit): Phạm vi từ -128 đến 127
+2	short (16-bit): Phạm vi từ -32,768 đến 32,767
+3	int (32-bit): Phạm vi từ -2^31 đến 2^31-1
+4	long (64-bit): Phạm vi từ -2^63 đến 2^63-1
  
 **Ví dụ thực tế:**  
 Bạn viết một chương trình Java đơn giản:  
