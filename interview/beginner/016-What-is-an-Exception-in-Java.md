@@ -1,37 +1,62 @@
 # Câu hỏi
-Java là gì và tại sao nó được gọi là "platform-independent"
+Exception là gì trong Java?
 
 # Trả lời ngắn gọn  
-Java là một ngôn ngữ lập trình hướng đối tượng, được gọi là "platform-independent" (độc lập nền tảng) vì mã Java sau khi biên dịch thành bytecode có thể chạy trên bất kỳ hệ điều hành nào có Java Virtual Machine (JVM).
+Exception (ngoại lệ) trong Java là một sự kiện xảy ra trong quá trình thực thi chương trình, làm gián đoạn luồng chương trình bình thường. Java cung cấp cơ chế xử lý ngoại lệ để phát hiện và xử lý lỗi một cách an toàn, tránh làm chương trình bị dừng đột ngột.
 
-# Chi tiết kèm ví dụ thực tế  
-Java được thiết kế để giảm sự phụ thuộc vào phần cứng hoặc hệ điều hành cụ thể, nhờ vào cơ chế biên dịch và thực thi đặc biệt của nó. Dưới đây là hai lý do chính giải thích tại sao Java là "platform-independent", kèm ví dụ minh họa.
 
-## Triển khai ý 1: Biên dịch thành bytecode  
-Java không biên dịch trực tiếp thành mã máy (machine code) như C/C++, mà thành bytecode - một dạng mã trung gian. Bytecode này được JVM diễn giải và thực thi. Vì JVM có sẵn trên nhiều nền tảng (Windows, macOS, Linux…), mã Java chỉ cần viết một lần là có thể chạy khắp nơi.  
-**Ví dụ thực tế:**  
-Bạn viết một chương trình Java đơn giản:  
+## Triển khai ý 1: Exception là lỗi xảy ra trong lúc chạy chương trình 
+Một số lỗi phổ biến dẫn đến ngoại lệ:
+*	Chia cho 0 (ArithmeticException)
+*	Truy cập phần tử ngoài phạm vi mảng (ArrayIndexOutOfBoundsException)
+*	Làm việc với đối tượng null (NullPointerException)
+  
+**Ví dụ thực tế: Chia số cho 0 gây lỗi ArithmeticException**   
 ```java
-public class HelloWorld {
+public class ExceptionExample {
     public static void main(String[] args) {
-        System.out.println("Xin chào, Java!");
+        int a = 10, b = 0;
+        int result = a / b; // Lỗi chia cho 0
+        System.out.println("Kết quả: " + result);
     }
 }
-```  
-Sau khi biên dịch bằng lệnh `javac HelloWorld.java`, bạn được file `HelloWorld.class` (bytecode). File này có thể chạy trên Windows, Linux hay macOS mà không cần chỉnh sửa, miễn là máy cài JVM.
 
-## Triển khai ý 2: JVM đóng vai trò trung gian  
-JVM là lớp trừu tượng hóa giữa bytecode và phần cứng thực tế. Mỗi hệ điều hành có phiên bản JVM riêng, nhưng giao diện và cách hoạt động của JVM là thống nhất. Điều này đảm bảo mã Java hoạt động đồng nhất trên mọi nền tảng.  
-**Ví dụ thực tế:**  
-Giả sử bạn phát triển một ứng dụng tính toán đơn giản:  
+```  
+**Kết quả**
 ```java
-public class Calculator {
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+```
+Lỗi này có thể khiến chương trình bị dừng đột ngột nếu không xử lý
+
+## Triển khai ý 2: Java cung cấp cơ chế xử lý ngoại lệ để tránh lỗi chương trình
+Java sử dụng khối try-catch để xử lý ngoại lệ mà không làm gián đoạn chương trình.
+
+**Ví dụ thực tế: Xử lý lỗi chia cho 0 bằng try-catch**   
+```java
+public class ExceptionHandlingExample {
     public static void main(String[] args) {
-        int a = 5, b = 10;
-        System.out.println("Tổng: " + (a + b));
+        try {
+            int a = 10, b = 0;
+            int result = a / b;
+            System.out.println("Kết quả: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Lỗi: Không thể chia cho 0!");
+        }
+        System.out.println("Chương trình vẫn tiếp tục chạy...");
     }
 }
-```  
-Bạn biên dịch trên macOS, sau đó copy file `.class` sang một máy Windows và chạy bằng lệnh `java Calculator`. Kết quả "Tổng: 15" sẽ hiển thị giống nhau, vì JVM trên Windows xử lý bytecode tương tự như JVM trên macOS.
 
-Nhờ bytecode và JVM, Java đạt được tính "platform-independent", giúp lập trình viên tiết kiệm thời gian và công sức khi triển khai ứng dụng trên nhiều hệ điều hành khác nhau.
+```  
+
+**Kết quả**
+```java
+Lỗi: Không thể chia cho 0!  
+Chương trình vẫn tiếp tục chạy...
+```
+Chương trình không bị dừng nhờ cơ chế xử lý ngoại lệ.
+
+**Kết luận**
+*	Exception là lỗi xảy ra trong lúc chạy chương trình.
+*	Có thể xử lý bằng try-catch để tránh gián đoạn chương trình.
+*	Giúp chương trình hoạt động ổn định và dễ bảo trì hơn.
+
