@@ -1,6 +1,9 @@
 # Câu hỏi
+Sự khác nhau giữa lỗi (Error) và ngoại lệ (Exception) trong Java?
 
 # Trả lời ngắn gọn  
+*	**Error** là lỗi nghiêm trọng do hệ thống gây ra, thường không thể xử lý được bằng mã Java. Ví dụ: OutOfMemoryError, StackOverflowError.
+*	**Exception** là lỗi xảy ra trong quá trình chạy chương trình, có thể bắt và xử lý được bằng try-catch. Ví dụ: NullPointerException, IOException.
 
 
 # Chi tiết kèm ví dụ thực tế  
