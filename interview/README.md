@@ -51,7 +51,9 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | ++i và i++ khác nhau như thế nào? | java_basic | -	++i (tiền tố): Tăng giá trị của i trước khi sử dụng.<br>-	i++ (hậu tố): Sử dụng giá trị hiện tại của i, sau đó mới tăng. |
 | Tại sao HashSet không cho phép phần tử trùng lặp? | java_basic | HashSet không cho phép phần tử trùng lặp vì nó sử dụng cơ chế băm (hashing) và so sánh bằng phương thức equals() để kiểm tra xem một phần tử đã tồn tại hay chưa. Khi thêm một phần tử mới, HashSet kiểm tra xem phần tử đó có cùng hash code với phần tử khác trong tập hợp hay không. Nếu có, nó tiếp tục kiểm tra bằng equals(). Nếu equals() trả về true, phần tử mới sẽ không được thêm vào. |
 | Sự khác nhau giữa lỗi (Error) và ngoại lệ (Exception) trong Java? | java_basic | - Error là lỗi nghiêm trọng do hệ thống gây ra, thường không thể xử lý được bằng mã Java. Ví dụ: OutOfMemoryError, StackOverflowError. <br> - Exception là lỗi xảy ra trong quá trình chạy chương trình, có thể bắt và xử lý được bằng try-catch. Ví dụ: NullPointerException, IOException. |
-| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Tại sao chúng ta cần tạo ngoại lệ tùy chỉnh thay vì sử dụng ngoại lệ có sẵn? | java_basic | Ngoại lệ tùy chỉnh (Custom Exception) giúp:
+1.	Diễn giải rõ ràng lỗi xảy ra trong chương trình bằng cách tạo các ngoại lệ có tên phù hợp với nghiệp vụ.
+2.	Tạo logic xử lý lỗi cụ thể cho ứng dụng, thay vì chỉ sử dụng ngoại lệ chung chung có sẵn. |
 | Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
 | Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
 
