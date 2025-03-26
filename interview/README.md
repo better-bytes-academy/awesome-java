@@ -50,6 +50,15 @@ Mục này chứa các câu hỏi phỏng vấn Java từ cơ bản tới nâng 
 | Tệp .java và .class trong Java có gì khác nhau? | java_basic | <br>-	Tệp .java: Chứa mã nguồn Java do lập trình viên viết.<br>-	Tệp .class: Chứa mã bytecode sau khi biên dịch từ .java, có thể chạy trên JVM.<br> Quá trình chuyển đổi: Tệp .java được biên dịch bằng javac để tạo ra tệp .class, sau đó JVM đọc và thực thi mã bytecode trong .class.|
 | ++i và i++ khác nhau như thế nào? | java_basic | -	++i (tiền tố): Tăng giá trị của i trước khi sử dụng.<br>-	i++ (hậu tố): Sử dụng giá trị hiện tại của i, sau đó mới tăng. |
 | Tại sao HashSet không cho phép phần tử trùng lặp? | java_basic | HashSet không cho phép phần tử trùng lặp vì nó sử dụng cơ chế băm (hashing) và so sánh bằng phương thức equals() để kiểm tra xem một phần tử đã tồn tại hay chưa. Khi thêm một phần tử mới, HashSet kiểm tra xem phần tử đó có cùng hash code với phần tử khác trong tập hợp hay không. Nếu có, nó tiếp tục kiểm tra bằng equals(). Nếu equals() trả về true, phần tử mới sẽ không được thêm vào. |
+| Sự khác nhau giữa lỗi (Error) và ngoại lệ (Exception) trong Java? | java_basic | - Error là lỗi nghiêm trọng do hệ thống gây ra, thường không thể xử lý được bằng mã Java. Ví dụ: OutOfMemoryError, StackOverflowError. <br> - Exception là lỗi xảy ra trong quá trình chạy chương trình, có thể bắt và xử lý được bằng try-catch. Ví dụ: NullPointerException, IOException. |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+| Khai báo biến trong Java như thế nào? Hãy cho một ví dụ | java_basic | Biến được khai báo với kiểu dữ liệu và tên, ví dụ: int number = 10; |
+
+
+
+
+
 
 ## Level intermediate
 | Câu hỏi | Tag | Câu trả lời |
